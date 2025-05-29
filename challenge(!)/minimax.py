@@ -13,7 +13,7 @@ def minimax(tablero,pos_raton,pos_gato,pos_queso,pos_trampa,profundidad,turno_ga
         #devuelvo la evaluacion del estado y ningun movimiento 
         return evaluar(tablero,pos_raton,pos_gato,pos_queso), None
     
-    #al gato es el max, va buscar minimizar su puntuacion
+    #al gato es el max, va buscar maximizar su puntuacion
     if turno_gato:
         mejor_valor = float("-inf")  # ← el gato es max, así que inicia con -infinito
         mejor_movimiento = None
@@ -86,7 +86,7 @@ def evaluar(tablero,pos_raton,pos_gato,pos_queso):
     #penalizo si el gato esta cerca
     peligro = max(0,3 - distancia_gato) * 50 #mientras mas cerca este el gato,peor
 
-    return distancia_queso * 5 + peligro #premia acercarse al queso y penaliza acercarse al gato este codigo me funciona super, me podrias explicar 
+    return distancia_queso * 5 + peligro #premia acercarse al queso y penaliza acercarse al gato  
 
 #funcion para mover al raton con minimax
 def mover_raton_minimax(tablero,pos_raton,pos_gato,pos_queso,pos_trampa,profundidad):
