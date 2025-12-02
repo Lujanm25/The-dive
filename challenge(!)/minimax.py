@@ -13,7 +13,7 @@ def minimax(tablero,pos_raton,pos_gato,pos_queso,pos_trampa,profundidad,turno_ga
     
     #al gato es el max, va buscar maximizar su puntuacion
     if turno_gato:
-        mejor_valor = float("-inf")  # ← el gato es max, así que inicia con -infinito
+        mejor_valor = float("-inf")  #  el gato es max, así que inicia con -infinito
         mejor_movimiento = None
 
         #obtengo los posibles movimientos del gato
@@ -60,7 +60,7 @@ def minimax(tablero,pos_raton,pos_gato,pos_queso,pos_trampa,profundidad,turno_ga
                 mejor_valor = valor
                 mejor_movimiento = nueva_pos_raton
 
-            beta = min(beta,valor)  # ← CORRECCIÓN: antes usaba alfa por error
+            beta = min(beta,valor) 
 
             if beta <= alfa:
                 break #poda
@@ -98,5 +98,6 @@ def mover_raton_minimax(tablero,pos_raton,pos_gato,pos_queso,pos_trampa,profundi
 def mover_gato_minimax(tablero,pos_raton,pos_gato,pos_queso,pos_trampa,profundidad):
     _, mejor_movimiento= minimax(tablero,pos_raton,pos_gato,pos_queso,pos_trampa,profundidad,True)
     return mejor_movimiento if mejor_movimiento else pos_gato
+
 
 
