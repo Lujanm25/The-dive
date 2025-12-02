@@ -14,7 +14,7 @@ def mover_aleatorio_raton(tablero,pos_raton,pos_trampa,pos_gato,pos_queso):
     ]
 
     for m in direcciones: #por cada movimiento posible dentro de mis direcciones
-        fila_nueva = pos_raton[0] + m[0] #suma el movimineto a la fila actual para saber donde va ir el 🐁
+        fila_nueva = pos_raton[0] + m[0] #suma el movimineto a la fila actual para saber donde va ir el raton
         columna_nueva = pos_raton[1] + m[1] #lo mismo pero con las columnas
 
         #veridico que la nueva posicion este dentro de mi tablero 
@@ -74,3 +74,4 @@ def mover_gato(tablero,pos_gato,pos_trampa,pos_queso):
             movimientos.append((fila_nueva,columna_nueva))
           
     return movimientos
+
