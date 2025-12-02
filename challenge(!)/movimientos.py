@@ -1,8 +1,6 @@
 import random #importo ramdon para poder darle movimientos aleatorios a mi raton
-from tablero import crear_tablero,mostrar_tablero
-from personajes import colocar_personajes
 
-def mover_aleatorio_raton(tablero,pos_raton,pos_gato,pos_queso,pos_trampa):
+def mover_aleatorio_raton(tablero,pos_raton,pos_trampa,pos_gato,pos_queso):
     movimientos = []
     direcciones = [
         (-1,0), #arriba
@@ -33,7 +31,7 @@ def mover_aleatorio_raton(tablero,pos_raton,pos_gato,pos_queso,pos_trampa):
     return pos_raton
 
 
-def posibles_movimientos_raton(tablero, pos_raton, pos_gato, pos_queso, pos_trampa):
+def posibles_movimientos_raton(tablero, pos_raton, pos_trampa,pos_gato,pos_queso):
     movimientos = []
     direcciones = [
         (-1,0), # arriba
